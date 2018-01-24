@@ -14,13 +14,13 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'tunerauto@inbox.ru';                 // SMTP username
-$mail->Password = 'iddqdidkfa00';                           // SMTP password
+$mail->Username = 'ql32@mail.ru';                 // SMTP username
+$mail->Password = 'EIyU188AevzTANQe3tcy';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('tunerauto@inbox.ru', 'Ildar S. Zhiganshin');
-$mail->addAddress('111970@mail.ru', 'Joe User');     // Add a recipient
+$mail->setFrom('ql32@mail.ru', 'Ildar S. Zhiganshin');
+$mail->addAddress('snakman@yandex.ru', 'Joe User');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -29,7 +29,7 @@ $mail->addAddress('111970@mail.ru', 'Joe User');     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Это сабджект сообщения';
+$mail->Subject = 'Это тема сообщения';
 $mail->Body    = 'Это тело сообщения дальше жирное <b>блаблабла</b>';
 $mail->AltBody = 'Это сообщение в формате plain text';
 

@@ -54,7 +54,7 @@
 				<div class="col-lg-4 col-lg-offset-0 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 					<div class="main-form">
 						<p class="main-form-header"><span>Send</span> A Message</p>
-						<form id="main-form-ajax" action="#">
+						<form id="main-form-ajax" action="#"">
 							<input type="hidden" name="whatever" value="Главная форма">
 							<input type="text" name="username" placeholder="You Name">
 							<input type="email" name="email" placeholder="You Email" required>
@@ -558,7 +558,7 @@
 	</script>
 
 	<script>
-			$(document).ready(function() {
+		$(document).ready(function() {
 
 			$("#main-form-ajax").submit(function() {
 				$.ajax({
@@ -572,6 +572,7 @@
 				});
 				return false;
 			});	
+			
 		});
 	</script>
 
