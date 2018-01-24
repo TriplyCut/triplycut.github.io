@@ -55,8 +55,14 @@
 					<div class="main-form">
 						<p class="main-form-header"><span>Send</span> A Message</p>
 						<form id="main-form-ajax" action="#">
-							<input type="hidden" name="whatever" value="Главная форма">
-							<input type="text" name="username" placeholder="You Name">
+
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="Studio">
+							<input type="hidden" name="admin_email" value="snakman@yandex.ru">
+							<input type="hidden" name="form_subject" value="main-form-header">
+							<!-- END Hidden Required Fields -->
+
+							<input type="text" name="Name" placeholder="You Name" required>
 							<input type="email" name="email" placeholder="You Email" required>
 							<textarea name="user_message" placeholder="Your Message" rows="5"></textarea>
 							<button class="main-form-btn" type="submit">Send Message <span>&rarr;</span></button>
@@ -560,18 +566,22 @@
 	<script>
 		$(document).ready(function() {
 
-			$("#main-form-ajax").submit(function() {
+			//E-mail Ajax Send
+			$("#main-form-ajax").submit(function() { //Change
+				var th = $(this);
 				$.ajax({
 					type: "POST",
-					url: "mail.php",
-					data: $(this).serialize()
+					url: "mail.php", //Change
+					data: th.serialize()
 				}).done(function() {
-					$(this).find("input").val("");
-					alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-					$("#main-form-ajax").trigger("reset");
+					alert("Thank you!");
+					setTimeout(function() {
+						// Done Functions
+						th.trigger("reset");
+					}, 1000);
 				});
 				return false;
-			});	
+			});
 
 		});
 	</script>
